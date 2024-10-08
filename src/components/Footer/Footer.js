@@ -30,12 +30,12 @@ function Footer(props) {
           <nav className="footer-nav">
             <ul>
               <li>
-                <a href="https://www.utd.edu.mx" target="_blank">
+                <a href="https://www.utd.edu.mx" target="_blank" rel="noopener noreferrer">
                   UTD
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/UTDURANGO" target="_blank">
+                <a href="https://www.facebook.com/UTDURANGO" target="_blank" rel="noopener noreferrer">
                   Facebook
                 </a>
               </li>              
@@ -43,8 +43,14 @@ function Footer(props) {
           </nav>
           <div className="credits ml-auto">
             <div className="copyright">
-              &copy; {1900 + new Date().getYear()}, made with{" "}
+              &copy; {1900 + new Date().getFullYear()}, made with{" "}
               <i className="fa fa-heart heart" /> by Creative Tim
+            </div>
+          </div>
+          <div className="credits ml-auto">
+            <div className="copyright">
+              &copy; {1900 + new Date().getFullYear()}, UTD{" "}
+              <i className="fa fa-heart heart" /> DERECHOS RESERVADOS JUAN PEREZ
             </div>
           </div>
         </Row>
@@ -55,7 +61,7 @@ function Footer(props) {
 
 Footer.propTypes = {
   default: PropTypes.bool,
-  fluid: PropTypes.bool
+  fluid: PropTypes.bool,
 };
 
 export default Footer;
